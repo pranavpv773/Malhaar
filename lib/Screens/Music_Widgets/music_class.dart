@@ -52,6 +52,9 @@ class MusicScreenState extends State<MusicScreen> {
 
   @override
   Widget build(BuildContext context) {
+    MediaQuery.of(context).size.height;
+    MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: background1,
       appBar: AppBar(
