@@ -16,6 +16,7 @@ class PlayList extends StatefulWidget {
 class _PlayListState extends State<PlayList> {
   final _formkey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
+  final nameRenmaeController = TextEditingController();
 
   final OnAudioQuery audioQuery = OnAudioQuery();
   @override
@@ -91,6 +92,7 @@ class _PlayListState extends State<PlayList> {
                 child: ListView.separated(
                   itemBuilder: (ctx, index) {
                     final data = playList[index];
+                    nameRenmaeController.text = playList[index].name;
                     return ListTile(
                       title: Text(
                         data.name,
@@ -158,7 +160,7 @@ class _PlayListState extends State<PlayList> {
             ),
             content: Form(
               child: TextFormField(
-                controller: _nameController,
+                controller: nameRenmaeController,
               ),
             ),
             actions: <Widget>[
@@ -332,7 +334,7 @@ class _PlayListState extends State<PlayList> {
   }
 
   void renamePlayList(index) {
-    final name = _nameController.text;
+    final name = nameRenmaeController.text;
 
     if (name.isEmpty) {
       Navigator.of(context).pop();
