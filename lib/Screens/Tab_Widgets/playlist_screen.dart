@@ -185,7 +185,7 @@ class _PlayListState extends State<PlayList> {
                   "Rename",
                 ),
                 onPressed: () {
-                  renamePlayList(index);
+                  // renamePlayList(index);
                 },
               ),
             ],
@@ -291,24 +291,24 @@ class _PlayListState extends State<PlayList> {
               thickness: 2,
               color: Color.fromARGB(255, 42, 11, 99),
             ),
-            ListTile(
-              leading: Container(
-                height: 40,
-                width: 40,
-                color: const Color.fromARGB(64, 33, 149, 243),
-                child: const Icon(
-                  Icons.app_registration,
-                  color: Color.fromARGB(255, 42, 11, 99),
-                ),
-              ),
-              title: const Text(
-                'Rename',
-              ),
-              onTap: () => {
-                Navigator.of(context).pop(),
-                myRename(context, index),
-              },
-            ),
+            // ListTile(
+            //   leading: Container(
+            //     height: 40,
+            //     width: 40,
+            //     color: const Color.fromARGB(64, 33, 149, 243),
+            //     child: const Icon(
+            //       Icons.app_registration,
+            //       color: Color.fromARGB(255, 42, 11, 99),
+            //     ),
+            //   ),
+            //   title: const Text(
+            //     'Rename',
+            //   ),
+            //   onTap: () => {
+            //     Navigator.of(context).pop(),
+            //     myRename(context, index),
+            //   },
+            // ),
             ListTile(
               leading: Container(
                 height: 40,
@@ -333,19 +333,19 @@ class _PlayListState extends State<PlayList> {
     );
   }
 
-  void renamePlayList(index) {
-    final name = nameRenmaeController.text;
+  // void renamePlayList(index) {
+  //   final name = nameRenmaeController.text;
 
-    if (name.isEmpty) {
-      Navigator.of(context).pop();
-    } else {
-      final rename = PlaylistDbModel(name: name, id: index);
+  //   if (name.isEmpty) {
+  //     Navigator.of(context).pop();
+  //   } else {
+  //     final rename = PlaylistDbModel(name: name, id: index);
 
-      if (index != null) {
-        updatePlaylist(index, rename);
-      }
-    }
-    _nameController.clear();
-    Navigator.of(context).pop();
-  }
+  //     if (index != null) {
+  //       updatePlaylist(index, rename,);
+  //     }
+  //   }
+  //   _nameController.clear();
+  //   Navigator.of(context).pop();
+  // }
 }
