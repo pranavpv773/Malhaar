@@ -109,12 +109,8 @@ class _ScanScreenState extends State<ScanScreen>
                     ),
                   ),
                   primary: Colors.amber,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 150,
-                    vertical: 10,
-                  ),
                   textStyle: const TextStyle(
-                    fontSize: 30,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
