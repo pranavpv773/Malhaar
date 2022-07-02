@@ -49,7 +49,6 @@ dependencies:
   audio_service: ^0.18.4
   url_launcher: ^6.1.4
   share_plus: ^4.0.9
-  marquee: ^2.2.1
  
   
   
