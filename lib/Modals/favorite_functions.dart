@@ -27,7 +27,7 @@ class DbFav {
 
   static displaySongs() async {
     final boxdb = await Hive.openBox('favourites');
-    final dynamic music = boxdb.values.toList();
+    final List<dynamic> music = boxdb.values.toList();
     favourites.value.clear();
     favloop.clear();
     for (int i = 0; i < music.length; i++) {
